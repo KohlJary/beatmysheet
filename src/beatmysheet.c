@@ -40,17 +40,20 @@ int main(int argc, char *argv[])
   /* Initialize ncurses */
   initscr();
   start_color();
+  use_default_colors();
   cbreak();
   noecho();
   curs_set(0);
 
   /* Initialize colors */
-  init_pair(1, COLOR_RED, COLOR_BLACK);
-  init_pair(2, COLOR_GREEN, COLOR_BLACK);
-  init_pair(3, COLOR_BLUE, COLOR_BLACK);
-  init_pair(4, COLOR_CYAN, COLOR_BLACK);
-  init_pair(5, COLOR_YELLOW, COLOR_BLACK);
-  init_pair(6, COLOR_MAGENTA, COLOR_BLACK);
+  init_pair(0, COLOR_WHITE, -1);
+  init_pair(1, COLOR_RED, -1);
+  init_pair(2, COLOR_GREEN, -1);
+  init_pair(3, COLOR_BLUE, -1);
+  init_pair(4, COLOR_CYAN, -1);
+  init_pair(5, COLOR_YELLOW, -1);
+  init_pair(6, COLOR_MAGENTA, -1);
+  init_pair(7, COLOR_BLACK, -1);
 
   /* Initialize window */
   WINDOW *menu_win;
